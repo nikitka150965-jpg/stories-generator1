@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Генератор крутых Stories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="app">
+        <h1>🎨 Генератор крутых Stories</h1>
+        
+        <div class="creator">
+            <!-- Шаг 1: Выбор темы -->
+            <div class="step">
+                <h3>1. Выбери тему:</h3>
+                <div class="themes">
+                    <button onclick="selectTheme('love')" class="theme-btn">💖 Отношения</button>
+                    <button onclick="selectTheme('study')" class="theme-btn">📚 Учеба</button>
+                    <button onclick="selectTheme('motivation')" class="theme-btn">🚀 Мотивация</button>
+                    <button onclick="selectTheme('humor')" class="theme-btn">😂 Юмор</button>
+                </div>
+            </div>
+
+            <!-- Шаг 2: Генерация текста -->
+            <div class="step">
+    <h3>🎨 2. Создаем контент:</h3>
+    <div id="textOutput" class="text-output">
+        Текст и визуал появятся здесь
+    </div>
+    <button onclick="generateTextWithImage()" class="generate-btn">
+        ✨ Сгенерировать текст + визуал
+    </button>
+</div>
+
+            <!-- Шаг 3: Выбор стиля -->
+            <div class="step">
+                <h3>3. Стиль оформления:</h3>
+                <div class="styles">
+                    <div class="style-option" onclick="selectStyle('neon')">
+                        <div class="preview neon-preview"></div>
+                        <span>Неон</span>
+                    </div>
+                    <div class="style-option" onclick="selectStyle('gradient')">
+                        <div class="preview gradient-preview"></div>
+                        <span>Градиент</span>
+                    </div>
+                    <div class="style-option" onclick="selectStyle('minimal')">
+                        <div class="preview minimal-preview"></div>
+                        <span>Минимализм</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Превью результата -->
+        <div class="preview-section">
+            <h3>Твоя Story:</h3>
+            <div id="storyPreview" class="story-preview minimal">
+                <div class="story-content">
+                    <p id="previewText">Твой текст появится здесь</p>
+                </div>
+            </div>
+            
+            <button onclick="downloadStory()" class="download-btn">📥 Скачать Story</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
